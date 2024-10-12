@@ -18,4 +18,3 @@ The Sudoku solver uses a **Backtracking Algorithm**, which is a form of **Recurs
 ## Technologies Used
 - C#
 - ASP.NET Core MVC
-- HTML/CSS
