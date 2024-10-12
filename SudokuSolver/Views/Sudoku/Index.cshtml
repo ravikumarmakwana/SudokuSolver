@@ -1,0 +1,23 @@
+﻿@model SudokuSolver.Models.Sudoku
+
+<h3>
+    Sudoku Solver
+</h3>
+<form asp-action="Solve" method="post">
+    <table>
+        @for (int i = 0; i < 9; i++)
+        {
+            <tr>
+                @for (int j = 0; j < 9; j++)
+                {
+                    <td>
+                        <input type="number" name="Board[@i][@j]" min="0" max="9" value="@Model.Board[i][j]" />
+                    </td>
+                }
+            </tr>
+        }
+    </table>
+    <br />
+    <button class="btn btn-primary" type="submit">Solve</button> &nbsp;
+    <button class="btn btn-primary" asp-action="Clear">Clear</button> &nbsp;
+</form>
